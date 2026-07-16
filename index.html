@@ -56,10 +56,19 @@ document.getElementById("dashboard").innerHTML = `
 
 </div>
 
-<div class="card">
-<h2>AI 市場摘要</h2>
 
-<p>${data.summary}</p>
+<div class="card">
+  <h2>AI 市場摘要</h2>
+  ${summaryHtml}
+</div>
+
+
+<p>
+let summaryHtml =
+  "<ol>" +
+  data.summary.map(item => `<li>${item}</li>`).join("") +
+  "</ol>";
+</p>
 </div>
 
 `;
